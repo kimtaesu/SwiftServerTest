@@ -17,6 +17,9 @@
 		2F7464DB238887CD001E68AA /* SwiftServerTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7464DA238887CD001E68AA /* SwiftServerTestUITests.swift */; };
 		2F7464E923888815001E68AA /* env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7464E823888815001E68AA /* env.swift */; };
 		2F7464EE2388892F001E68AA /* SBTUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7464ED2388892F001E68AA /* SBTUITest.swift */; };
+		2F74650323889260001E68AA /* SwifterStubsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74650123889260001E68AA /* SwifterStubsTests.swift */; };
+		2F74650423889260001E68AA /* HTTPStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74650223889260001E68AA /* HTTPStubs.swift */; };
+		2F746507238892ED001E68AA /* Feed.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F746506238892ED001E68AA /* Feed.json */; };
 		89770A476BF9AB05565D408F /* Pods_SwiftServerTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E60B642A4D828F25D87D98D /* Pods_SwiftServerTest.framework */; };
 		B4A28B4506E21CD5DC640786 /* Pods_SwiftServerTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFA95458AD017AEE519441A /* Pods_SwiftServerTestUITests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +59,9 @@
 		2F7464DC238887CD001E68AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F7464E823888815001E68AA /* env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = env.swift; sourceTree = "<group>"; };
 		2F7464ED2388892F001E68AA /* SBTUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTUITest.swift; sourceTree = "<group>"; };
+		2F74650123889260001E68AA /* SwifterStubsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterStubsTests.swift; sourceTree = "<group>"; };
+		2F74650223889260001E68AA /* HTTPStubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStubs.swift; sourceTree = "<group>"; };
+		2F746506238892ED001E68AA /* Feed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Feed.json; sourceTree = "<group>"; };
 		319D8DAD5C93D9C0E5E3047C /* Pods-SwiftServerTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftServerTestTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftServerTestTests/Pods-SwiftServerTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		3E60B642A4D828F25D87D98D /* Pods_SwiftServerTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftServerTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A42E98A6278CA33D99276D6 /* Pods-SwiftServerTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftServerTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftServerTestUITests/Pods-SwiftServerTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +164,8 @@
 		2F7464D9238887CD001E68AA /* SwiftServerTestUITests */ = {
 			isa = PBXGroup;
 			children = (
+				2F746506238892ED001E68AA /* Feed.json */,
+				2F74650023889260001E68AA /* Swifter */,
 				2F7464EC2388892F001E68AA /* SBTUITestTunnel */,
 				2F7464DA238887CD001E68AA /* SwiftServerTestUITests.swift */,
 				2F7464DC238887CD001E68AA /* Info.plist */,
@@ -171,6 +179,15 @@
 				2F7464ED2388892F001E68AA /* SBTUITest.swift */,
 			);
 			path = SBTUITestTunnel;
+			sourceTree = "<group>";
+		};
+		2F74650023889260001E68AA /* Swifter */ = {
+			isa = PBXGroup;
+			children = (
+				2F74650123889260001E68AA /* SwifterStubsTests.swift */,
+				2F74650223889260001E68AA /* HTTPStubs.swift */,
+			);
+			path = Swifter;
 			sourceTree = "<group>";
 		};
 		9D27E0AE41DC70F934CB0F54 /* Frameworks */ = {
@@ -309,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F746507238892ED001E68AA /* Feed.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +460,8 @@
 			files = (
 				2F7464DB238887CD001E68AA /* SwiftServerTestUITests.swift in Sources */,
 				2F7464EE2388892F001E68AA /* SBTUITest.swift in Sources */,
+				2F74650323889260001E68AA /* SwifterStubsTests.swift in Sources */,
+				2F74650423889260001E68AA /* HTTPStubs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

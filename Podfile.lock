@@ -12,11 +12,13 @@ PODS:
   - SBTUITestTunnelServer (5.3.0):
     - GCDWebServer (~> 3.0)
     - SBTUITestTunnelCommon
+  - Swifter (1.4.7)
 
 DEPENDENCIES:
   - GCDWebServer
   - SBTUITestTunnelClient
   - SBTUITestTunnelServer
+  - Swifter
 
 SPEC REPOS:
   trunk:
@@ -24,13 +26,15 @@ SPEC REPOS:
     - SBTUITestTunnelClient
     - SBTUITestTunnelCommon
     - SBTUITestTunnelServer
+    - Swifter
 
 SPEC CHECKSUMS:
   GCDWebServer: c0ab22c73e1b84f358d1e2f74bf6afd1c60829f2
   SBTUITestTunnelClient: ef43aeb9ee11598e1486394db62a34f9ace58585
   SBTUITestTunnelCommon: 3ea6bd5cd355f0cc96998b9e2b6f4d8a322630d8
   SBTUITestTunnelServer: de39983c53712ae3b3c22faddee92d79e1f5395f
+  Swifter: 2327ef5d872c638aebab79646ce494af508b0c8f
 
-PODFILE CHECKSUM: cdd015cd4fd34efc67bf7cc6e31549025936a80b
+PODFILE CHECKSUM: c2e595277a21622d844544d6e914e8a7d0f0e4cb
 
 COCOAPODS: 1.8.4

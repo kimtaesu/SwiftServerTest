@@ -19,7 +19,7 @@ target 'SwiftServerTest' do
 
   target 'SwiftServerTestUITests' do
     inherit! :search_paths
-#    pod 'Swifter', '~> 1.4.7'
+    pod 'Swifter'
 #    pod 'SBTUITestTunnel'
 #    pod 'Embassy', '~> 4.1.0'
 #    pod 'EnvoyAmbassador'

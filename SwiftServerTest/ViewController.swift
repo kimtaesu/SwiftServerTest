@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     @IBAction func networkRequested(_ sender: Any) {
         
        let baseUrl = ProcessInfo.processInfo.environment["BASEURL"]!
-
         guard let gitUrl = URL(string: baseUrl + "/users/shashikant86") else { return }
         URLSession.shared.dataTask(with: gitUrl) { (data, response
             , error) in
