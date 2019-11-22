@@ -15,8 +15,8 @@
 		2F7464C5238887CD001E68AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7464C3238887CD001E68AA /* LaunchScreen.storyboard */; };
 		2F7464D0238887CD001E68AA /* SwiftServerTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7464CF238887CD001E68AA /* SwiftServerTestTests.swift */; };
 		2F7464DB238887CD001E68AA /* SwiftServerTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7464DA238887CD001E68AA /* SwiftServerTestUITests.swift */; };
-		2F7464E923888815001E68AA /* env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7464E823888815001E68AA /* env.swift */; };
-		2F7464EE2388892F001E68AA /* SBTUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7464ED2388892F001E68AA /* SBTUITest.swift */; };
+		2F7465182388974A001E68AA /* RealNetworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7465172388974A001E68AA /* RealNetworkUITests.swift */; };
+		2F74651A238897B1001E68AA /* Server in Resources */ = {isa = PBXBuildFile; fileRef = 2F746519238897B0001E68AA /* Server */; };
 		89770A476BF9AB05565D408F /* Pods_SwiftServerTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E60B642A4D828F25D87D98D /* Pods_SwiftServerTest.framework */; };
 		B4A28B4506E21CD5DC640786 /* Pods_SwiftServerTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFA95458AD017AEE519441A /* Pods_SwiftServerTestUITests.framework */; };
 /* End PBXBuildFile section */
@@ -54,8 +54,8 @@
 		2F7464D6238887CD001E68AA /* SwiftServerTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftServerTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7464DA238887CD001E68AA /* SwiftServerTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftServerTestUITests.swift; sourceTree = "<group>"; };
 		2F7464DC238887CD001E68AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F7464E823888815001E68AA /* env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = env.swift; sourceTree = "<group>"; };
-		2F7464ED2388892F001E68AA /* SBTUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTUITest.swift; sourceTree = "<group>"; };
+		2F7465172388974A001E68AA /* RealNetworkUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealNetworkUITests.swift; sourceTree = "<group>"; };
+		2F746519238897B0001E68AA /* Server */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Server; sourceTree = "<group>"; };
 		319D8DAD5C93D9C0E5E3047C /* Pods-SwiftServerTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftServerTestTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftServerTestTests/Pods-SwiftServerTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		3E60B642A4D828F25D87D98D /* Pods_SwiftServerTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftServerTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A42E98A6278CA33D99276D6 /* Pods-SwiftServerTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftServerTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftServerTestUITests/Pods-SwiftServerTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,7 +141,6 @@
 				2F7464C1238887CD001E68AA /* Assets.xcassets */,
 				2F7464C3238887CD001E68AA /* LaunchScreen.storyboard */,
 				2F7464C6238887CD001E68AA /* Info.plist */,
-				2F7464E823888815001E68AA /* env.swift */,
 			);
 			path = SwiftServerTest;
 			sourceTree = "<group>";
@@ -158,19 +157,20 @@
 		2F7464D9238887CD001E68AA /* SwiftServerTestUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2F7464EC2388892F001E68AA /* SBTUITestTunnel */,
+				2F746519238897B0001E68AA /* Server */,
+				2F7465162388974A001E68AA /* RealNetwork */,
 				2F7464DA238887CD001E68AA /* SwiftServerTestUITests.swift */,
 				2F7464DC238887CD001E68AA /* Info.plist */,
 			);
 			path = SwiftServerTestUITests;
 			sourceTree = "<group>";
 		};
-		2F7464EC2388892F001E68AA /* SBTUITestTunnel */ = {
+		2F7465162388974A001E68AA /* RealNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				2F7464ED2388892F001E68AA /* SBTUITest.swift */,
+				2F7465172388974A001E68AA /* RealNetworkUITests.swift */,
 			);
-			path = SBTUITestTunnel;
+			path = RealNetwork;
 			sourceTree = "<group>";
 		};
 		9D27E0AE41DC70F934CB0F54 /* Frameworks */ = {
@@ -194,7 +194,7 @@
 				2F7464B1238887CB001E68AA /* Sources */,
 				2F7464B2238887CB001E68AA /* Frameworks */,
 				2F7464B3238887CB001E68AA /* Resources */,
-				7D8AADEE2F04EDF30FD447DB /* [CP] Embed Pods Frameworks */,
+				F818ADE9ACAA5DE4FC0A21A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,7 +232,6 @@
 				2F7464D2238887CD001E68AA /* Sources */,
 				2F7464D3238887CD001E68AA /* Frameworks */,
 				2F7464D4238887CD001E68AA /* Resources */,
-				5A3A910B981647DECD3A4D65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F74651A238897B1001E68AA /* Server in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,23 +337,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5A3A910B981647DECD3A4D65 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTestUITests/Pods-SwiftServerTestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTestUITests/Pods-SwiftServerTestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTestUITests/Pods-SwiftServerTestUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		792BB5D98AEBEF204A81B1A6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,23 +357,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7D8AADEE2F04EDF30FD447DB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTest/Pods-SwiftServerTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTest/Pods-SwiftServerTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTest/Pods-SwiftServerTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AFB0EB7CCFD59E66C958635B /* [CP] Check Pods Manifest.lock */ = {
@@ -415,6 +381,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F818ADE9ACAA5DE4FC0A21A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTest/Pods-SwiftServerTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTest/Pods-SwiftServerTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTest/Pods-SwiftServerTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -424,7 +407,6 @@
 			files = (
 				2F7464BD238887CB001E68AA /* ViewController.swift in Sources */,
 				2F7464B9238887CB001E68AA /* AppDelegate.swift in Sources */,
-				2F7464E923888815001E68AA /* env.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F7464DB238887CD001E68AA /* SwiftServerTestUITests.swift in Sources */,
-				2F7464EE2388892F001E68AA /* SBTUITest.swift in Sources */,
+				2F7465182388974A001E68AA /* RealNetworkUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

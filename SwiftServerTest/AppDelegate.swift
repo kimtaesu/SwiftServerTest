@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SBTUITestTunnelServer
 
 
 @UIApplicationMain
@@ -17,13 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var baseUrl: String?
 
     internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-       
-        
-        #if DEBUG
-            SBTUITestTunnelServer.takeOff()
-        #endif
-        
-        
         return true
     }
 
