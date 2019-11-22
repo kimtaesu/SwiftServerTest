@@ -2,6 +2,21 @@ PODS:
   - GCDWebServer (3.5.3):
     - GCDWebServer/Core (= 3.5.3)
   - GCDWebServer/Core (3.5.3)
+  - OHHTTPStubs (8.0.0):
+    - OHHTTPStubs/Default (= 8.0.0)
+  - OHHTTPStubs/Core (8.0.0)
+  - OHHTTPStubs/Default (8.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (8.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (8.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (8.0.0)
+  - OHHTTPStubs/Swift (8.0.0):
+    - OHHTTPStubs/Default
   - SBTUITestTunnelClient (5.3.0):
     - SBTUITestTunnelClient/Connectionless (= 5.3.0)
     - SBTUITestTunnelCommon
@@ -15,22 +30,26 @@ PODS:
 
 DEPENDENCIES:
   - GCDWebServer
+  - OHHTTPStubs
+  - OHHTTPStubs/Swift
   - SBTUITestTunnelClient
   - SBTUITestTunnelServer
 
 SPEC REPOS:
   trunk:
     - GCDWebServer
+    - OHHTTPStubs
     - SBTUITestTunnelClient
     - SBTUITestTunnelCommon
     - SBTUITestTunnelServer
 
 SPEC CHECKSUMS:
   GCDWebServer: c0ab22c73e1b84f358d1e2f74bf6afd1c60829f2
+  OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
   SBTUITestTunnelClient: ef43aeb9ee11598e1486394db62a34f9ace58585
   SBTUITestTunnelCommon: 3ea6bd5cd355f0cc96998b9e2b6f4d8a322630d8
   SBTUITestTunnelServer: de39983c53712ae3b3c22faddee92d79e1f5395f
 
-PODFILE CHECKSUM: cdd015cd4fd34efc67bf7cc6e31549025936a80b
+PODFILE CHECKSUM: 205e8d0140aeca603c6552dd526d8239b9cbd4e3
 
 COCOAPODS: 1.8.4

@@ -11,8 +11,8 @@ target 'SwiftServerTest' do
 
   target 'SwiftServerTestTests' do
     inherit! :search_paths
-#    pod 'OHHTTPStubs/Swift'
-#    pod 'OHHTTPStubs'
+    pod 'OHHTTPStubs/Swift'
+    pod 'OHHTTPStubs'
 #    pod 'Hippolyte', '~> 1.1.0'
 #    pod 'Mockingjay'
   end
