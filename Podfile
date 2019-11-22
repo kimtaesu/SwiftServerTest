@@ -21,8 +21,8 @@ target 'SwiftServerTest' do
     inherit! :search_paths
 #    pod 'Swifter', '~> 1.4.7'
 #    pod 'SBTUITestTunnel'
-#    pod 'Embassy', '~> 4.1.0'
-#    pod 'EnvoyAmbassador'
+    pod 'Embassy', '~> 4.1.0'
+    pod 'EnvoyAmbassador'
     
     pod 'SBTUITestTunnelClient'
 
