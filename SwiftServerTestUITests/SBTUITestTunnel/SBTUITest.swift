@@ -9,7 +9,7 @@
 import Foundation
 
 import XCTest
-import SBTUITestTunnel
+import SBTUITestTunnelClient
 
 class SBTUITest: XCTestCase {
     
@@ -34,7 +34,7 @@ class SBTUITest: XCTestCase {
         
         _ = sbtapp.stubRequests(matching: SBTRequestMatch.init(url: "http://localhost:8080/users/shashikant86"), response: SBTStubResponse(response: ["location": "SBT"]))
         sbtapp.buttons["MakeNetworkRequest"].tap()
-        wait(forElement: sbtapp.staticTexts["SBT"], timeout: 3)
+        sbtapp.staticTexts["SBT"].waitForExistence(timeout: 3)
         XCTAssert(sbtapp.staticTexts["SBT"].exists)
         
     }
