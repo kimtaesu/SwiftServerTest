@@ -17,6 +17,8 @@
 		2F7464DB238887CD001E68AA /* SwiftServerTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7464DA238887CD001E68AA /* SwiftServerTestUITests.swift */; };
 		2F7464E923888815001E68AA /* env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7464E823888815001E68AA /* env.swift */; };
 		2F7464EE2388892F001E68AA /* SBTUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7464ED2388892F001E68AA /* SBTUITest.swift */; };
+		2F7464F623888FA8001E68AA /* MockingJayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7464F523888FA8001E68AA /* MockingJayTest.swift */; };
+		2F7464F823889048001E68AA /* Feed.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F7464F723889048001E68AA /* Feed.json */; };
 		89770A476BF9AB05565D408F /* Pods_SwiftServerTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E60B642A4D828F25D87D98D /* Pods_SwiftServerTest.framework */; };
 		B4A28B4506E21CD5DC640786 /* Pods_SwiftServerTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFA95458AD017AEE519441A /* Pods_SwiftServerTestUITests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +58,8 @@
 		2F7464DC238887CD001E68AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F7464E823888815001E68AA /* env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = env.swift; sourceTree = "<group>"; };
 		2F7464ED2388892F001E68AA /* SBTUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTUITest.swift; sourceTree = "<group>"; };
+		2F7464F523888FA8001E68AA /* MockingJayTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockingJayTest.swift; sourceTree = "<group>"; };
+		2F7464F723889048001E68AA /* Feed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Feed.json; sourceTree = "<group>"; };
 		319D8DAD5C93D9C0E5E3047C /* Pods-SwiftServerTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftServerTestTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftServerTestTests/Pods-SwiftServerTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		3E60B642A4D828F25D87D98D /* Pods_SwiftServerTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftServerTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A42E98A6278CA33D99276D6 /* Pods-SwiftServerTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftServerTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftServerTestUITests/Pods-SwiftServerTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,7 +153,9 @@
 		2F7464CE238887CD001E68AA /* SwiftServerTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				2F7464F723889048001E68AA /* Feed.json */,
 				2F7464CF238887CD001E68AA /* SwiftServerTestTests.swift */,
+				2F7464F523888FA8001E68AA /* MockingJayTest.swift */,
 				2F7464D1238887CD001E68AA /* Info.plist */,
 			);
 			path = SwiftServerTestTests;
@@ -213,6 +219,7 @@
 				2F7464C7238887CD001E68AA /* Sources */,
 				2F7464C8238887CD001E68AA /* Frameworks */,
 				2F7464C9238887CD001E68AA /* Resources */,
+				2FBA951D9D857E1572976BCB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,7 +239,7 @@
 				2F7464D2238887CD001E68AA /* Sources */,
 				2F7464D3238887CD001E68AA /* Frameworks */,
 				2F7464D4238887CD001E68AA /* Resources */,
-				5A3A910B981647DECD3A4D65 /* [CP] Embed Pods Frameworks */,
+				A9DB0462192E65D3502A8945 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F7464F823889048001E68AA /* Feed.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,21 +345,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5A3A910B981647DECD3A4D65 /* [CP] Embed Pods Frameworks */ = {
+		2FBA951D9D857E1572976BCB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTestUITests/Pods-SwiftServerTestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTestTests/Pods-SwiftServerTestTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTestUITests/Pods-SwiftServerTestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTestTests/Pods-SwiftServerTestTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTestUITests/Pods-SwiftServerTestUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTestTests/Pods-SwiftServerTestTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		792BB5D98AEBEF204A81B1A6 /* [CP] Check Pods Manifest.lock */ = {
@@ -391,6 +399,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTest/Pods-SwiftServerTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9DB0462192E65D3502A8945 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTestUITests/Pods-SwiftServerTestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTestUITests/Pods-SwiftServerTestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftServerTestUITests/Pods-SwiftServerTestUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AFB0EB7CCFD59E66C958635B /* [CP] Check Pods Manifest.lock */ = {
@@ -433,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F7464D0238887CD001E68AA /* SwiftServerTestTests.swift in Sources */,
+				2F7464F623888FA8001E68AA /* MockingJayTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

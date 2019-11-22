@@ -14,7 +14,7 @@ target 'SwiftServerTest' do
 #    pod 'OHHTTPStubs/Swift'
 #    pod 'OHHTTPStubs'
 #    pod 'Hippolyte', '~> 1.1.0'
-#    pod 'Mockingjay'
+    pod 'Mockingjay', '~> 3.0.0-alpha.1'
   end
 
   target 'SwiftServerTestUITests' do
@@ -30,9 +30,10 @@ target 'SwiftServerTest' do
   post_install do |installer|
       installer.pods_project.targets.each do |target|
           target.build_configurations.each do |config|
-              if config.name == 'DEBUG' # the name of your build configuration
-                  config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', 'ENABLE_UITUNNEL=1']
-              end
+#            config.build_settings['SWIFT_VERSION'] = '4.2'
+#              if config.name == 'DEBUG' # the name of your build configuration
+#                  config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', 'ENABLE_UITUNNEL=1']
+#              end
           end
       end
   end
