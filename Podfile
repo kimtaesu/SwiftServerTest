@@ -4,8 +4,8 @@
 target 'SwiftServerTest' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'SBTUITestTunnelServer'
-  pod 'GCDWebServer', :inhibit_warnings => true
+#  pod 'SBTUITestTunnelServer'
+#  pod 'GCDWebServer', :inhibit_warnings => true
 
   # Pods for SwiftStubs
 
@@ -15,6 +15,7 @@ target 'SwiftServerTest' do
 #    pod 'OHHTTPStubs'
 #    pod 'Hippolyte', '~> 1.1.0'
 #    pod 'Mockingjay'
+    pod "Cuckoo"
   end
 
   target 'SwiftServerTestUITests' do
@@ -24,7 +25,7 @@ target 'SwiftServerTest' do
 #    pod 'Embassy', '~> 4.1.0'
 #    pod 'EnvoyAmbassador'
     
-    pod 'SBTUITestTunnelClient'
+#    pod 'SBTUITestTunnelClient'
 
   end
   post_install do |installer|

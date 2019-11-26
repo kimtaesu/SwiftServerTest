@@ -9,45 +9,25 @@
 import UIKit
 
 struct GitHub: Codable {
-    
+
     let name: String?
     let location: String?
 }
 
 
-
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var locationLabel: UILabel!
-    
-    
+
+
     @IBAction func networkRequested(_ sender: Any) {
-        
-       let baseUrl = ProcessInfo.processInfo.environment["BASEURL"]!
+        GithubService().request { github in
+            if let glocation = github.location {
 
-        guard let gitUrl = URL(string: baseUrl + "/users/shashikant86") else { return }
-        URLSession.shared.dataTask(with: gitUrl) { (data, response
-            , error) in
-
-            guard let data = data else { return }
-            do {
-                
-                let decoder = JSONDecoder()
-                let gitData = try decoder.decode(GitHub.self, from: data)
-                
-                DispatchQueue.main.sync {
-                    if let glocation = gitData.location {
-                        self.locationLabel.text = glocation
-                        self.locationLabel.isHidden = false
-                    }
-                }
-                
-            } catch let err {
-                print("Err", err)
+                self.locationLabel.text = glocation
+                self.locationLabel.isHidden = false
             }
-            }.resume()
-        
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,3 +43,28 @@ class ViewController: UIViewController {
 
 }
 
+
+class GithubService: RequestNetworking {
+    func request(closure: @escaping (GitHub) -> Void) {
+        let baseUrl = ProcessInfo.processInfo.environment["BASEURL"]!
+
+        guard let gitUrl = URL(string: baseUrl + "/users/shashikant86") else { return }
+        URLSession.shared.dataTask(with: gitUrl) { (data, response
+            , error) in
+
+            guard let data = data else { return }
+            do {
+
+                let decoder = JSONDecoder()
+                let gitData = try decoder.decode(GitHub.self, from: data)
+
+                DispatchQueue.main.sync {
+                    closure(gitData)
+                }
+
+            } catch let err {
+                print("Err", err)
+            }
+        }.resume()
+    }
+}
